@@ -74,7 +74,7 @@ class Item:
     def __repr__(self):
         return f"{self.__class__.__name__}('{self.name},' {self.__price}, {self.quantity})"
 
-    def __connect(self):
+    def __connect(self,smtp):
         pass
 
     def __prepare_body(self):
@@ -92,5 +92,6 @@ class Item:
         self.__connect("")
         self.__prepare_body()
         self.__send()
+        print("Email Sent")
 
 
